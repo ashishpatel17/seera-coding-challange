@@ -1,18 +1,22 @@
 language: node_js
-node_js:
-  - "6"
 
+node_js:
+  - "11"
+  
 notifications:
   email: false
 
 cache:
   directories:
-    - node_modules
-
-install:
-  - npm install
+  - node_modules
 
 script:
   - npm run build-dev
-  - npm run build-prod
   - npm start
+
+deploy:
+  provider: pages
+  github_token: 1227ec779873d50db7624e44bc430e238b3f1398
+  local_dir: build
+  on:
+    branch: master
