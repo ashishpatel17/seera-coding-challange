@@ -1,7 +1,7 @@
 {
-  "name": "redux-minimal",
+  "name": "seera-coding-challange",
   "version": "1.0.0",
-  "description": "Start building complex react-redux apps today, with this minimalist easy to understand starter kit (boilerplate)",
+  "description": "react app",
   "keywords": [
     "react",
     "redux",
@@ -10,11 +10,7 @@
     "boilerplate"
   ],
   "main": "index.js",
-  "homepage": "http://redux-minimal.js.org/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/catalin-luntraru/redux-minimal"
-  },
+  "homepage": "https://ashishpatel17.github.io/seera-coding-challange/",
   "scripts": {
     "start": "webpack-dev-server --inline --hot --history-api-fallback --host localhost --port 8080",
     "build-dev": "webpack --config webpack.dev.config.js",

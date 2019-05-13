@@ -11,12 +11,12 @@ cache:
   - node_modules
 
 script:
-  - npm run build-dev
-  - npm start
+  - npm run build-prod
 
 deploy:
   provider: pages
-  github_token: 1227ec779873d50db7624e44bc430e238b3f1398
+  skip_cleanup: true
+  github_token: #git_token
   local_dir: build
   on:
     branch: master
