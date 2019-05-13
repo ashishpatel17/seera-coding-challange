@@ -14,8 +14,9 @@ script:
   - npm run build-prod
 
 deploy:
-  provider: pages
+  provider: surge
   skip_cleanup: true
-  github_token: $git_token
+  domain: ashishpatel.surge.sh
+  project: ./build/
   on:
     branch: master
