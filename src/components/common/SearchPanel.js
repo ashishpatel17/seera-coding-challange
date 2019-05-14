@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { MuiPickersUtilsProvider, DatePicker } from 'material-ui-pickers';
 import { connect } from "react-redux";
 import { browserHistory } from 'react-router';
+import moment from "moment";
 
 const styles = {
 }
@@ -30,7 +31,13 @@ class SearchPanel extends React.Component {
     }
 
     onSearchBtnClick = (e) => {
-        browserHistory.push('/hotelSearch/' + this.state.fromDate.getTime() + '/' + this.state.toDate.getTime());
+        let startDate = moment(this.state.fromDate, "DD.MM.YYYY");
+        let endDate = moment(this.state.toDate, "DD.MM.YYYY");
+        if(endDate.isBefore(startDate)){
+            alert("Checkout Date should be after the Checkin Date");
+        }else{
+            browserHistory.push('/hotelSearch/' + this.state.fromDate.getTime() + '/' + this.state.toDate.getTime());
+        }
     }
 
     render() {
