@@ -171,10 +171,10 @@ class HotelListing extends React.Component {
             </div>
             <div>
               {this.state.hotelList.length > 0 ? (
-                <Grid container >
+                <Grid container spacing={16}>
                   {filteredList.length > 0 ? (
                     filteredList.map((data, i) => (
-                      <Grid key={i} item md={4}>
+                      <Grid key={i} item md={4} sm={4} xs={6}>
                         <div className="detailCard">
                           <HotelDetail cardData={data}></HotelDetail>
                         </div>
