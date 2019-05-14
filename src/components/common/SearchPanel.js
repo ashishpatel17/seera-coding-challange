@@ -6,7 +6,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import Grid from '@material-ui/core/Grid';
 import { MuiPickersUtilsProvider, DatePicker } from 'material-ui-pickers';
 import { connect } from "react-redux";
-import {browserHistory} from 'react-router';
+import { browserHistory } from 'react-router';
 
 const styles = {
 }
@@ -17,29 +17,29 @@ class SearchPanel extends React.Component {
         this.state = {
             fromDate: new Date(),
             toDate: new Date()
-          };
+        };
     }
 
-    
-    onFromDateChange=(e)=>{
-        this.setState({fromDate:e});
-    }
-    
-    onToDateChange=(e)=>{
-        this.setState({toDate:e});
+
+    onFromDateChange = (e) => {
+        this.setState({ fromDate: e });
     }
 
-    onSearchBtnClick=(e)=>{
-        browserHistory.push('/hotelSearch/'+this.state.fromDate.getTime()+'/'+this.state.toDate.getTime());
+    onToDateChange = (e) => {
+        this.setState({ toDate: e });
     }
 
-    render(){
+    onSearchBtnClick = (e) => {
+        browserHistory.push('/hotelSearch/' + this.state.fromDate.getTime() + '/' + this.state.toDate.getTime());
+    }
+
+    render() {
         const { classes } = this.props;
         return (
             <div className="SearchPanelComponent">
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                     <Grid container >
-                        <Grid item  sm={5} md={5} >
+                        <Grid item sm={5} md={5} >
                             <div className="datePickerContainer">
                                 <DatePicker
                                     clearable
@@ -52,7 +52,7 @@ class SearchPanel extends React.Component {
                                 />
                             </div>
                         </Grid>
-                        <Grid item  sm={5} md={5} >
+                        <Grid item sm={5} md={5} >
                             <div className="datePickerContainer">
                                 <DatePicker
                                     clearable
@@ -65,7 +65,7 @@ class SearchPanel extends React.Component {
                                 />
                             </div>
                         </Grid>
-                        <Grid item  sm={2} md={2} >
+                        <Grid item sm={2} md={2} >
                             <div className="searchBtnContainer">
                                 <Button variant="contained" color="primary" onClick={this.onSearchBtnClick}>
                                     Search
@@ -81,11 +81,11 @@ class SearchPanel extends React.Component {
 }
 
 SearchPanel.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired,
 };
 
 function mapStateToProps(state) {
-  return {};
+    return {};
 }
 
 export default withStyles(styles)(connect(mapStateToProps)(SearchPanel));

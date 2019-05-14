@@ -19,7 +19,7 @@ const styles = theme => ({
 });
 
 class Home extends React.Component {
-  
+
   componentWillMount() {
     // this.props.dispatch({type: 'FETCH_HOTELS'});
   }
@@ -28,24 +28,24 @@ class Home extends React.Component {
     super(props);
   }
   render() {
-    const { classes,hotels } = this.props;
+    const { classes, hotels } = this.props;
     return (
       <div className="homePage">
         <Header></Header>
         <div className="searchContainer">
           <div className={classes.root}>
             <Grid container >
-              <Grid item   md={2} >
+              <Grid item md={2} >
               </Grid>
-              <Grid item  md={8}>
-                  <Paper >
-                    <div className="searchPanel">
-                      <SearchPanel></SearchPanel>
-                    </div>
-                  </Paper>
+              <Grid item md={8}>
+                <Paper >
+                  <div className="searchPanel">
+                    <SearchPanel></SearchPanel>
+                  </div>
+                </Paper>
               </Grid>
-              <Grid item   md={2}>
-                
+              <Grid item md={2}>
+
               </Grid>
             </Grid>
           </div>

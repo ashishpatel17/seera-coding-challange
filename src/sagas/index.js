@@ -1,6 +1,6 @@
 import { takeLatest } from "redux-saga";
 import { fork } from "redux-saga/effects";
-import { fetchHotels} from "./hotels";
+import { fetchHotels } from "./hotels";
 
 // main saga generators
 export function* sagas() {

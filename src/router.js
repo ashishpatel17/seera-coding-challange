@@ -10,11 +10,11 @@ import NotFound from "./components/NotFound";
 const router = (
   <Router onUpdate={() => window.scrollTo(0, 0)} history={history}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
+      <IndexRoute component={Home} />
       <Route path="hotelSearch" component={HotelListing}>
-        <Route path="/hotelSearch/:fromDate/:toDate" component={HotelListing}/>
+        <Route path="/hotelSearch/:fromDate/:toDate" component={HotelListing} />
       </Route>
-      <Route path="*" component={NotFound}/>
+      <Route path="*" component={NotFound} />
     </Route>
   </Router>
 );

@@ -6,5 +6,5 @@ import hotels from "./hotels";
 export const reducers = combineReducers({
   routing: routerReducer,
   form: formReducer,
-  hotels:hotels
+  hotels: hotels
 });
