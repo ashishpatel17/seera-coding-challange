@@ -16,8 +16,8 @@ class SearchPanel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            fromDate: new Date(),
-            toDate: new Date()
+            fromDate: new Date("10/26/2020"),
+            toDate: new Date("10/31/2020")
         };
     }
 
