@@ -16,6 +16,7 @@ script:
 deploy:
   provider: surge
   skip_cleanup: true
-  domain: ashishpatel.surge.sh
+  domain: mpatelashish.surge.sh
+  project: ./public/
   on:
     branch: master

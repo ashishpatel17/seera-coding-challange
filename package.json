@@ -16,8 +16,7 @@
     "build-dev": "webpack --config webpack.dev.config.js",
     "build-prod": "webpack -p --config webpack.prod.config.js",
     "test": "mocha --recursive --compilers js:babel-register --require babel-polyfill --require ignore-styles --require isomorphic-fetch",
-    "test-watch": "npm test -- --watch",
-    "deploy": "gh-pages -d build"
+    "test-watch": "npm test -- --watch"
   },
   "babel": {
     "presets": [
@@ -46,6 +45,8 @@
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.1",
+    "react-scripts": "3.0.1",
+    "express": "4.16.4",
     "react-router-bootstrap": "^0.23.1",
     "react-router-redux": "^4.0.7",
     "redux": "^3.6.0",
